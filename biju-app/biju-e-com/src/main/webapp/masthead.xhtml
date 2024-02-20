@@ -1,0 +1,24 @@
+<ui:component 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+	<f:loadBundle var="msg" basename="messages"/>
+    
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <img class="masthead-avatar mb-5" src="#{request.contextPath}/img/party-biju.PNG" alt="..." />
+            <h1 class="masthead-heading text-uppercase mb-0">Biju Girls</h1>
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <p class="masthead-subheading font-weight-light mb-0">
+                <h3>#{msg.joias} - Semijoias - Bijuterias - #{msg.acessorios}</h3>
+            </p>
+        </div>
+    </header>
+    
+</ui:component>
