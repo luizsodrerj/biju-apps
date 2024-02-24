@@ -1,0 +1,42 @@
+<ui:component 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+    
+    <f:loadBundle var="msg" basename="messages"/>
+
+	<section class="page-section bg-primary text-white mb-0" id="about">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-white">
+                Sobre a Loja
+            </h2>
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 ms-auto">
+                  <p class="lead">
+                	Vendemos diversos tipos de #{' '} 
+                	<h:outputText value="#{msg.joias}"/>, Semijoias, 
+                	Bijuterias variadas e muitos #{' '}
+                	<h:outputText value="#{msg.acessorios}"/>.
+                  </p>
+                </div>
+                <div class="col-lg-4 me-auto">
+                  <p class="lead">
+                	Aproveite e misture nossos diferentes #{' '} 
+                	<h:outputText value="#{msg['acess.minus']}"/> e bijuterias 
+                	para ter um look estiloso! Eternize momentos 
+                	#{' '} <h:outputText value="#{msg.incriveis}"/> presenteando com nossas 
+                	#{' '} <h:outputText value="#{msg.pecas}"/>. 
+               	  </p>
+               	</div>
+            </div>
+        </div>
+    </section>
+    
+</ui:component>
+

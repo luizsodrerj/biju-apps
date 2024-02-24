@@ -5,8 +5,10 @@
 @Scope("session") 
 
 
-git commit -m "Implementação da app admin Biju"
+git commit -m "Implementação da App Biju"
 
+#{'\''}
+#{'<use'}#{' '}#{'xlink:href='}#{'\"'}#{'#cart4'}#{'\"'}#{'</use>'}
 
 <ui:component 
 	xmlns:ui="http://java.sun.com/jsf/facelets"
@@ -68,4 +70,8 @@ git commit -m "Implementação da app admin Biju"
  implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+		
+		
+		// firstrow ((nextpg * 12) - 12) + 1
+		// lastrow nextpg * 12
 		

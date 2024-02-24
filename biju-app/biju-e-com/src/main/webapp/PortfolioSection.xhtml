@@ -31,8 +31,26 @@
                 </div>
         	</ui:repeat>
         </div>
+        <div class="row">
+        	<div class="col-md-3"></div>
+        	<div class="col-md-6 text-center">
+        	  <h:form>
+        		<h:commandLink action="#{shopCartItemNavController.goToMainPage}">
+		     		<button 
+		     			type="button" 
+		     			class="btn btn-secondary btn-lg" 
+		     			style="font-weight: bold;">
+		        		<h:outputText value="#{msg['bt.navegar.site']}"/> 
+		        	</button>
+        		</h:commandLink>
+        	  </h:form>
+        	</div>
+        	<div class="col-md-3"></div>
+		</div>        
       </div> 
 	</section> 
     
     
 </ui:component>
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+<h:head>
+	<ui:include src="header.xhtml"></ui:include>
+	
+	<link type="text/css" rel="stylesheet" href="#{request.contextPath}/styles/layout-produtos.css" />
+	
+</h:head>
+<body id="page-top">
+  <ui:include src="nav.xhtml"></ui:include>
+
+  <div id="root">
+  <h:form id="form">
+  
+	<f:loadBundle var="msg" basename="messages"/>
+	
+	<section class="page-section">
+	    <div class="container" style="margin-top: 20px;">
+			<div class="row">
+				<div class="col-md-10" style="text-align: center;">
+					<p:button 
+						styleClass="rounded-button ui-button-secondary" 
+						icon="pi pi-arrow-left"/>
+					<span style="font-weight: bold;">
+						#{shopCartItemNavController.currentPage}
+					</span> 
+					<p:button 
+						onclick="jQuery('[id*=nextPage]').click(); return false;"
+						styleClass="rounded-button ui-button-secondary"
+						style="margin-left: 5px; margin-right: 5px;" 
+						icon="pi pi-arrow-right"/>
+					<h:commandLink
+						action="#{shopCartItemNavController.onClickLinkNextPage}" 
+						value="#{msg.proxima}"
+						id="nextPage"/>
+				</div>
+			</div>
+			<div class="row">
+				<ui:include src="produtos.xhtml">
+					<ui:param 
+						value="#{shopCartItemNavController.pecas}"
+						name="productList"/>
+				</ui:include>
+			</div>	
+	    
+	    </div>
+	</section>
+  </h:form>
+  </div>
+  <ui:include src="footer.xhtml"></ui:include>
+</body>
+</html>
+
+
+
+

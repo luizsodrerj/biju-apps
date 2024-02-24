@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+<h:head>
+	<ui:include src="header.xhtml"></ui:include>
+</h:head>
+<body id="page-top"> 
+  <ui:include src="nav.xhtml"></ui:include>
+
+  <div id="root">
+  <h:form id="form">
+	
+	<f:loadBundle var="msg" basename="messages"/>
+	
+	<section class="page-section">
+	    <div class="container d-flex align-items-center flex-column">
+            <p class="masthead-subheading font-weight-light mb-0" style="margin-top:20px;">
+                <h3>Detalhes do Produto a ser adicionado no Carrinho</h3>
+            </p>
+            <div class="row" style="width: 70%;"> 
+				<div class="mb-3">
+				    <label for="nomePeca" class="form-label" style="font-weight:bold;">
+						#{shopCartController.produto.nome}
+				    </label>
+				</div>
+				<div class="mb-3">
+				    <label for="descricao" class="form-label">
+				    	<p>#{shopCartController.produto.descricao}</p>
+				    </label>
+				</div>
+				<div class="mb-3">
+				    <label for="preco" class="form-label" style="font-weight: bold;">
+	                   <h:outputText value="#{shopCartController.produto.preco}">
+	                       <f:convertNumber
+		               	   	  minFractionDigits="2"
+			               	  maxFractionDigits="2"
+	                       	  currencySymbol="R$"
+	                       	  type="currency" 
+			               	  locale="pt_BR"/>
+                   		</h:outputText>
+				    </label>
+				</div>
+				<div class="mb-3">
+					<h:panelGroup id="preview">
+	                   <h:graphicImage 
+	                   	  url="/imagegen?prodId=#{shopCartController.produto.id}" 
+	                   	  style="width:308px;"/>
+					</h:panelGroup>
+				</div>
+				<div class="field col-12 md:col-4">
+				    <i class="pi pi-tag product-category-icon"/>
+                    <span><h:outputText value="#{shopCartController.produto.categoria.nome}"/></span>
+				</div>
+  	            <div class="mb-3" style="margin-top: 22px;">
+	  	            <h:commandLink
+	  	            	action="#{shopCartController.onClickBtSaveAddToShopCart}"
+	  	            	value="Adicionar #{msg.peca} ao Carrinho de Compras"
+	  	  	            styleClass="btn btn-danger btn-lg"/>
+				</div>
+				<div class="mb-3">
+	  	        	<h:commandLink
+	  	            	action="#{shopCartController.goToMainPage}"
+	  	            	value="Cancelar e Continuar Comprando"
+	  	  	            styleClass="btn btn-warning btn-lg"/>
+				</div>
+	         </div> 
+	    </div>
+	</section>
+  </h:form>
+  </div>
+  <ui:include src="footer.xhtml"/>
+</body> 
+</html>
+
+
+
+
+

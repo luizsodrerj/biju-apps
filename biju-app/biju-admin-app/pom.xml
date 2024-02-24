@@ -8,10 +8,8 @@
 	</parent>
 	
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>biju</groupId>
 	<artifactId>biju-admin-app</artifactId>
 	<packaging>war</packaging>
-	<version>1.0.0</version>
 
 	<build>
 		<finalName>biju-admin-app</finalName>

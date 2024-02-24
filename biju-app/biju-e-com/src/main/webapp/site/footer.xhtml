@@ -1,0 +1,57 @@
+<ui:component 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+	<f:loadBundle var="msg" basename="messages"/>
+    
+	<footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">#{msg.localizacao}</h4>
+                    <p class="lead mb-0">
+                        #{msg['end.completo']}
+                        <br />
+                        #{msg['end.complemen']}
+                        <br />
+                        #{msg['horario']} 
+                    </p>
+                </div>
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Contatos e Redes Sociais</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/patriciacarvalho.dasilva.73">
+                    	<i class="fab fa-fw fa-facebook-f"></i>
+                    </a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/bijus_girls22">
+                    	<i class="fab fa-fw fa-instagram"></i>
+                    </a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="mailto:patybijugirl@gmail.com">
+                    	<i class="fab fa-fw fa-google"></i>
+                    </a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://whatsapp.com">
+                    	<i class="fab fa-fw fa-whatsapp"></i>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-4">BijuGirls</h4>
+                    <p class="lead mb-0">
+                        BijuGirls pode acessada no seguinte link
+                        <a href="http://www.bijugirls.com.br">WebSite BijuGirls</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+	</footer>
+      
+	<div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Copyright #{msg.copyright} BijuGirls Bijuterias</small></div>
+	</div>
+
+  <script src="#{request.contextPath}/js/bootstrap.bundle.min.js"></script>
+  <script src="#{request.contextPath}/js/bootstrap-carousel.js"></script>
+  <script src="#{request.contextPath}/js/scripts.js"></script>
+	      
+</ui:component>
+
